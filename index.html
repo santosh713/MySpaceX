@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MySpaceX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="public/img/favicon.png"/>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <div id="navbar"></div>
+
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-24 text-center">
+      <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-6
+                 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+                 bg-clip-text text-transparent uppercase">
+        MySpaceX
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+        A modern hub of features — minimal, aesthetic, and built just for you.
+      </p>
+    </div>
+  </section>
+
+  <section class="flex-grow">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Explore Features</h2>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-start hover:shadow-xl transition">
+          <div class="w-12 h-12 bg-indigo-100 text-indigo-600 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Hours Tracker</h3>
+          <p class="text-gray-600 flex-grow">Clock in/out or add shifts manually if you forgot.</p>
+          <a href="hours.html" class="mt-4 inline-block px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">Open</a>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-start hover:shadow-xl transition">
+          <div class="w-12 h-12 bg-purple-100 text-purple-600 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Pay Calculator</h3>
+          <p class="text-gray-600 flex-grow">See your live bi-weekly pay calculation with deductions and charts.</p>
+          <a href="payCalculator.html" class="mt-4 inline-block px-4 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-700 transition">Open</a>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-start hover:shadow-xl transition">
+          <div class="w-12 h-12 bg-pink-100 text-pink-600 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Feature 3</h3>
+          <p class="text-gray-600 flex-grow">Designed with care, this feature makes life simpler and better.</p>
+          <a href="feature3.html" class="mt-4 inline-block px-4 py-2 rounded-lg bg-pink-600 text-white hover:bg-pink-700 transition">Learn More</a>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-start hover:shadow-xl transition">
+          <div class="w-12 h-12 bg-green-100 text-green-600 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Feature 4</h3>
+          <p class="text-gray-600 flex-grow">Tools and automation to bring everything together seamlessly.</p>
+          <a href="feature4.html" class="mt-4 inline-block px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="public/assets/js/config.js"></script>
+  <script src="public/assets/js/main.js"></script>
+
+</body>
+</html>

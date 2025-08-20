@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pay Calculator • MySpaceX</title>
+  <!-- Tailwind via CDN (same as Hours) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Shared navbar (identical loader as Hours) -->
+  <div id="navbar"></div>
+
+  <main class="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <header class="mb-6">
+      <h1 class="text-3xl font-extrabold text-gray-900">Pay Calculator</h1>
+      <p class="text-gray-600 mt-1">
+        Bi-weekly periods anchored to <strong>Fri, Aug 15, 2025</strong>. Live totals from Hours.
+      </p>
+    </header>
+
+    <!-- Pay period selector -->
+    <section class="bg-white rounded-2xl shadow p-4 sm:p-6 mb-6">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+        <div class="flex-1">
+          <label for="periodSelect" class="block text-sm text-gray-600 mb-1">Select Pay Period</label>
+          <select id="periodSelect" class="w-full rounded-lg border-gray-300 px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"></select>
+        </div>
+        <div class="text-sm text-gray-500">Default = current running period</div>
+      </div>
+    </section>
+
+    <!-- Summary + Chart -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- Summary -->
+      <div class="bg-white rounded-2xl shadow p-4 sm:p-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">
+          Summary for <span id="periodLabel" class="font-bold"></span>
+        </h2>
+        <div class="space-y-1 text-gray-800">
+          <p><span class="text-gray-500">Total Hours:</span> <span id="totalHours">0.00</span></p>
+          <p><span class="text-gray-500">Gross Pay:</span> $<span id="grossPay">0.00</span></p>
+          <hr class="my-2">
+          <p><span class="text-gray-500">Federal Tax:</span> $<span id="fedAmount">0.00</span></p>
+          <p><span class="text-gray-500">CPP:</span> $<span id="cppAmount">0.00</span></p>
+          <p><span class="text-gray-500">EI:</span> $<span id="eiAmount">0.00</span></p>
+          <p><span class="text-gray-500">Total Deductions:</span> $<span id="deductions">0.00</span></p>
+          <p class="text-green-700 font-semibold text-lg">Take home: $<span id="netPay">0.00</span></p>
+        </div>
+      </div>
+
+      <!-- Doughnut chart -->
+      <div class="bg-white rounded-2xl shadow p-4 sm:p-6 flex items-center justify-center">
+        <div class="w-full h-64 sm:h-80">
+          <canvas id="payChart"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer -->
+  <div id="footer"></div>
+
+  <!-- Same loaders as Hours -->
+  <script src="public/assets/js/config.js"></script>
+  <script src="public/assets/js/main.js"></script>
+  <script src="public/assets/js/paycalculator.js"></script>
+
+
+
+</body>
+</html>
